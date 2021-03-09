@@ -10,6 +10,8 @@
 // document.querySelector('.guess').value = 23;
 // console.log(document.querySelector('.guess').value);
 
+const number = Math.trunc(Math.random() * 20) + 1;
+console.log(number);
 
 document.querySelector('.check').addEventListener('click', function () {
     const guess = Number(document.querySelector('.guess').value);
