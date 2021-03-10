@@ -13,4 +13,8 @@ This is a a guess-my-number game that uses HTML, CSS, and Javascript. Everytime 
 ## Visuals: 
 
 ![A Sample Picture](images/screenshot1.png)
+![A Sample Picture](images/screenshot2.png)
+![A Sample Picture](images/screenshot3.png)
+
+
 
