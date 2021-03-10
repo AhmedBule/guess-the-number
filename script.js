@@ -28,31 +28,32 @@ document.querySelector('.check').addEventListener('click', function () {
 
         document.querySelector('body').style.backgroundColor = '#60b347';
 
-        document.querySelector('.number').style.width = '30rem'    // It needs to be in a string. 
+        document.querySelector('.number').style.width = '30rem'    // It needs to be in a string.
+
 
         if (score > highScore) {
             highScore = score;
-            document.querySelector(".highscore").textContent = highScore;
+            document.querySelector(".highscore").textContent = highScore
+        }
 
-        } else if (guess > secretNumber) {
-            // When guess is too high
-            if (score > 1) {
-                document.querySelector('.message').textContent = 'Too high'
-                score--;
-                document.querySelector('.score').textContent = score;
-            } else {
-                document.querySelector('.message').textContent = 'You lost the game'
-                document.querySelector('.score').textContent = 0;
-
-            }
-            // When is guess is too low
-        } else if (guess < secretNumber) {
-            document.querySelector('.message').textContent = 'Too low';
+    } else if (guess > secretNumber) {
+        // When guess is too high
+        if (score > 1) {
+            document.querySelector('.message').textContent = 'Too high'
             score--;
-            document.querySelector('body').style.backgroundColor = "#FF0000";
-            document.querySelector('.score').textContent = score
+            document.querySelector('.score').textContent = score;
+        } else {
+            document.querySelector('.message').textContent = 'You lost the game'
+            document.querySelector('.score').textContent = 0;
 
         }
+        // When is guess is too low
+    } else if (guess < secretNumber) {
+        document.querySelector('.message').textContent = 'Too low';
+        score--;
+        document.querySelector('body').style.backgroundColor = "#FF0000";
+        document.querySelector('.score').textContent = score
+
     }
 
 
